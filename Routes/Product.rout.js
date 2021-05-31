@@ -44,13 +44,22 @@ router.get('/:id', async (req, res, next)=>{
         console.log(error.message);
     }
 });
-router.patch('/:id', (req, res, next)=>{
-    res.send('updating a single product');
+router.patch('/:id', async (req, res, next)=>{ 
+    try{
+        const id = req.params.id;
+        const updates = req.body;
+
+        const resoult = await Product.findByIdAndUpdate(id, updates);
+        res.send(resoult);
+    }catch{
+        console.log(error.message);
+    }
 });
 router.delete('/:id', async (req, res, next)=>{
     const id = req.params.id;
     try{
         const resoult = await Product.findByIdAndDelete(id);
+        console.log(resoult);
         res.send(resoult);
     }catch(error){
         console.log(error.message);
