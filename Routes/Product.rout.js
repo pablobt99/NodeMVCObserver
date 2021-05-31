@@ -5,7 +5,7 @@ const Product = require('../Models/Product.model');
 
 router.get('/', async (req, res,next) =>{
    try{
-       const resoults = await Product.find();
+       const resoults = await Product.find({}, {__v: 0});
        res.send(resoults)
 
    }catch(error){
