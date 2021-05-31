@@ -19,7 +19,7 @@ PATCH  http://localhost:3000/products/60b4b52bf85de528de5a6664
 Content-Type: application/json
 
 {
-    "name" : "new",
+    "name" : "mew",
     "price": 500  
 }
 
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ### Delete aproduct by Id
 
-DELETE  http://localhost:3000/products/60b4b452dd5448271e6b05de
+DELETE  http://localhost:3000/products/60b4b52bf85de528de5a6664
 
 ### 
 
