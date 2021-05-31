@@ -1,6 +1,19 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
 const app = express();
+
+
+//mongodb+srv://admin:<password>@cluster0.2n9cs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+//admin
+//zRNYUtw4IKEuKQiI
+
+mongoose.connect('mongodb+srv://admin:zRNYUtw4IKEuKQiI@cluster0.2n9cs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/RestApi', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>{
+    console.log("db connected");
+})
 
 const ProductsRoute = require('./Routes/Product.rout');
 app.use('/products', ProductsRoute);
