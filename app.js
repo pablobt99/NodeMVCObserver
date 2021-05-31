@@ -12,7 +12,7 @@ app.use((req,res,next)=>{
 });
 
 //error handler
-app.use((err, res, re1, next)=>{
+app.use((err, req, res, next)=>{
     res.status(err.status || 500)
     res.send({
         error: {
