@@ -4,7 +4,7 @@
 
 Instlar node.js
 
-Unstalar npm
+Instalar npm
 
 ejecutar estos comandos desde la consola en la carpeta del proecto:
 
