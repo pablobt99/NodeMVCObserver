@@ -47,8 +47,14 @@ router.get('/:id', async (req, res, next)=>{
 router.patch('/:id', (req, res, next)=>{
     res.send('updating a single product');
 });
-router.delete('/:id', (req, res, next)=>{
-    res.send('deleting a single product');
+router.delete('/:id', async (req, res, next)=>{
+    const id = req.params.id;
+    try{
+        const resoult = await Product.findByIdAndDelete(id);
+        res.send(resoult);
+    }catch(error){
+        console.log(error.message);
+    }
 });
 
 module.exports = router;
