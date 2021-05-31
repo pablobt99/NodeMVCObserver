@@ -12,7 +12,8 @@ app.use(express.urlencoded({extended: true}))
 
 mongoose.connect('mongodb+srv://admin:zRNYUtw4IKEuKQiI@cluster0.2n9cs.mongodb.net/RestApi', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 }).then(()=>{
     console.log("db connected");
 });
