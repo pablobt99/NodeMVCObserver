@@ -3,17 +3,29 @@ const mongoose = require('mongoose');
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 //mongodb+srv://admin:<password>@cluster0.2n9cs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 //admin
 //zRNYUtw4IKEuKQiI
 
-mongoose.connect('mongodb+srv://admin:zRNYUtw4IKEuKQiI@cluster0.2n9cs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/RestApi', {
+mongoose.connect('mongodb+srv://admin:zRNYUtw4IKEuKQiI@cluster0.2n9cs.mongodb.net/RestApi', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(()=>{
     console.log("db connected");
-})
+});
+
+app.all('/test', (req,res)=>{
+    //console.log(req.query);
+    //console.log(req.query.name);
+    //res.send(req.query);
+    //console.log(req.params);
+    //res.send(req.params);
+    console.log(req.body);
+    res.send(req.body);
+});
 
 const ProductsRoute = require('./Routes/Product.rout');
 app.use('/products', ProductsRoute);
