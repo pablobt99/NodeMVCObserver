@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ### Delete aproduct by Id
 
-DELETE  http://localhost:3000/products/60b4beb928061231fd1ebe9d
+DELETE  http://localhost:3000/products/60b4b452dd5448271e6b05de
 
 ### 
 
