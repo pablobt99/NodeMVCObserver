@@ -8,6 +8,14 @@ app.get('/', (req,res,next)=>{
     res.send("i am the one");
 });
 
+app.post('/', (req, res, next) =>{
+
+});
+
+app.delete('/', (req, res, next) =>{
+
+});
+
 app.listen(3000,()=>{
     console.log('Server started on port 3000...');
 });
