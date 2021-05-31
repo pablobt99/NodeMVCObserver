@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pablobt99/NodeMVCObserver/issues"
   },
-  "homepage": "https://github.com/pablobt99/NodeMVCObserver#readme"
+  "homepage": "https://github.com/pablobt99/NodeMVCObserver#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
