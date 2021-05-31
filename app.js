@@ -2,19 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req,res,next)=>{
-    console.log(req.url);
-    console.log(req.method);
-    res.send("i am the one");
-});
+const ProductsRoute = require('./Routes/Product.rout');
+app.use('/products', ProductsRoute);
 
-app.post('/', (req, res, next) =>{
 
-});
-
-app.delete('/', (req, res, next) =>{
-
-});
 
 app.listen(3000,()=>{
     console.log('Server started on port 3000...');
