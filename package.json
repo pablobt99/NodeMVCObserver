@@ -1,0 +1,19 @@
+{
+  "name": "nodemvcobserver",
+  "version": "1.0.0",
+  "description": "an mvc and observer app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablobt99/NodeMVCObserver.git"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pablobt99/NodeMVCObserver/issues"
+  },
+  "homepage": "https://github.com/pablobt99/NodeMVCObserver#readme"
+}
